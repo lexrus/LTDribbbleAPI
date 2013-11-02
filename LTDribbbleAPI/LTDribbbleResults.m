@@ -18,6 +18,7 @@
 + (LTDribbbleResults *) resultsWithItems:(NSArray *)items pagination:(LTDribbblePagination *)aPagination
 {
     LTDribbbleResults *results = [LTDribbbleResults results];
+    
     results.items = items;
     results.pagination = aPagination;
     return results;

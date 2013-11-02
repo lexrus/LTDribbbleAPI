@@ -9,7 +9,7 @@
 #import "LTDribbbleAPI.h"
 #import "LTDribbbleResponseSerializer.h"
 
-#define f(fmt, val) [NSString stringWithFormat:fmt, val]
+#define f(fmt, val) [NSString stringWithFormat : fmt, val]
 
 NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
 
@@ -44,133 +44,169 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     return __instance;
 }
 
-- (void)shot:(uint)aShotId :(LTResultBlock)resultBlock
+- (void) shot:(uint)aShotId :(LTResultBlock)resultBlock
 {
-    [self GET:f(rShotById, aShotId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTShot *shot) {
+    [self GET:f(rShotById, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTShot *shot) {
         if (resultBlock)
+        {
             resultBlock(shot, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultBlock)
+        {
             resultBlock(nil, error);
+        }
     }];
 }
 
-- (void)rebounds:(uint)aShotId :(LTResultsBlock)resultsBlock
+- (void) rebounds:(uint)aShotId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rShotRebounds, aShotId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rShotRebounds, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)shots:(NSString *)listType :(LTResultsBlock)resultsBlock
+- (void) shots:(NSString *)listType :(LTResultsBlock)resultsBlock
 {
-    [self GET:listType parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:listType parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)popularShots:(LTResultsBlock)resultsBlock
+- (void) popularShots:(LTResultsBlock)resultsBlock
 {
-    [self shots:rPopularShots :resultsBlock];
+    [self shots:rPopularShots:resultsBlock];
 }
 
-- (void)everyoneShots:(LTResultsBlock)resultsBlock
+- (void) everyoneShots:(LTResultsBlock)resultsBlock
 {
-    [self shots:rEveryoneShots :resultsBlock];
+    [self shots:rEveryoneShots:resultsBlock];
 }
 
-- (void)debutsShots:(LTResultsBlock)resultsBlock
+- (void) debutsShots:(LTResultsBlock)resultsBlock
 {
-    [self shots:rDebutsShots :resultsBlock];
+    [self shots:rDebutsShots:resultsBlock];
 }
 
-- (void)shotsOfFollowing:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsOfFollowing:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rFollowingShots, aPlayerId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rFollowingShots, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)comments:(uint)aShotId :(LTResultsBlock)resultsBlock
+- (void) comments:(uint)aShotId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rShotComments, aShotId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rShotComments, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)shotsOfPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsOfPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rPlayerShots, aPlayerId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rPlayerShots, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)shotsPlayerLikes:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsPlayerLikes:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rPlayerLikes, aPlayerId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rPlayerLikes, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)player:(NSString *)aPlayerId :(LTResultBlock)resultBlock
+- (void) player:(NSString *)aPlayerId :(LTResultBlock)resultBlock
 {
-    [self GET:f(rPlayerById, aPlayerId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTPlayer *player) {
+    [self GET:f(rPlayerById, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTPlayer *player) {
         if (resultBlock)
+        {
             resultBlock(player, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultBlock)
+        {
             resultBlock(nil, error);
+        }
     }];
 }
 
-- (void)playersOfType:(NSString *)relationType ofPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersOfType:(NSString *)relationType ofPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(relationType, aPlayerId) parameters:nil success:^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(relationType, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
+        {
             resultsBlock(results, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        }
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (resultsBlock)
+        {
             resultsBlock(nil, error);
+        }
     }];
 }
 
-- (void)playerFollowers:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playerFollowers:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerFollowers ofPlayer:aPlayerId :resultsBlock];
+    [self playersOfType:rPlayerFollowers ofPlayer:aPlayerId:resultsBlock];
 }
 
-- (void)playersFollowedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersFollowedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerFollowing ofPlayer:aPlayerId :resultsBlock];
+    [self playersOfType:rPlayerFollowing ofPlayer:aPlayerId:resultsBlock];
 }
 
-- (void)playersDraftedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersDraftedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerDraftees ofPlayer:aPlayerId :resultsBlock];
+    [self playersOfType:rPlayerDraftees ofPlayer:aPlayerId:resultsBlock];
 }
 
 @end

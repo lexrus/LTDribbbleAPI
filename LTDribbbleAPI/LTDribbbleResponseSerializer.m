@@ -80,7 +80,8 @@
         else if (object[@"players"] && [object[@"players"] isKindOfClass:[NSArray class]] && object[@"pages"])
         {
             NSMutableArray *players = [NSMutableArray array];
-            for (NSDictionary *player in object[@"players"]) {
+            for (NSDictionary *player in object[@"players"])
+            {
                 [players addObject:[LTPlayer modelObjectWithDictionary:player]];
             }
             LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
