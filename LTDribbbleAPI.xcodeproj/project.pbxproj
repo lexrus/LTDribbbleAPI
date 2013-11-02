@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D717A28B18253E240046BF2C /* LTDribbbleResults.m in Sources */ = {isa = PBXBuildFile; fileRef = D717A28A18253E240046BF2C /* LTDribbbleResults.m */; };
 		D71E98761822B752005D87C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E98751822B752005D87C5 /* XCTest.framework */; };
 		D71E987C1822B752005D87C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D71E987A1822B752005D87C5 /* InfoPlist.strings */; };
 		D71E987E1822B752005D87C5 /* LTDribbbleAPI_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D717A28918253E240046BF2C /* LTDribbbleResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleResults.h; sourceTree = "<group>"; };
+		D717A28A18253E240046BF2C /* LTDribbbleResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbbleResults.m; sourceTree = "<group>"; };
 		D71E98441822AC7B005D87C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D71E98541822B71E005D87C5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		D71E98551822B71E005D87C5 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				D759AAF21823F4B000EA4232 /* LTDribbbleDataModels.h */,
 				D759AAFC1823F58200EA4232 /* LTDribbblePagination.h */,
 				D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */,
+				D717A28918253E240046BF2C /* LTDribbbleResults.h */,
+				D717A28A18253E240046BF2C /* LTDribbbleResults.m */,
 				D759AAF31823F4B000EA4232 /* LTComment.h */,
 				D759AAF41823F4B000EA4232 /* LTComment.m */,
 				D759AAF51823F4B000EA4232 /* LTPlayer.h */,
@@ -305,6 +310,7 @@
 				D759AB051823FFD700EA4232 /* AFNetworkReachabilityManager.m in Sources */,
 				D759AB071823FFD700EA4232 /* AFURLConnectionOperation.m in Sources */,
 				D759AB091823FFD700EA4232 /* AFURLRequestSerialization.m in Sources */,
+				D717A28B18253E240046BF2C /* LTDribbbleResults.m in Sources */,
 				D759AB0B1823FFD700EA4232 /* AFURLResponseSerialization.m in Sources */,
 				D759AAFB1823F4B000EA4232 /* LTShot.m in Sources */,
 				D759AAFE1823F58200EA4232 /* LTDribbblePagination.m in Sources */,

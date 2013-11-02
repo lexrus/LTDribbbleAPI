@@ -40,16 +40,56 @@
     
     if ([object isKindOfClass:[NSDictionary class]])
     {
+        // An error
         if (object[@"message"])
         {
             NSError *responsedError = [NSError errorWithDomain:LTErrorDomain
                                                           code:NSURLErrorDataNotAllowed
                                                       userInfo:@{ NSLocalizedDescriptionKey:object[@"message"] }];
             *error = responsedError;
+            return object;
         }
+        // A shot
         else if (object[@"title"] && object[@"width"])
         {
             return [LTShot modelObjectWithDictionary:object];
+        }
+        // Results with pagination
+        else if (object[@"shots"] && [object[@"shots"] isKindOfClass:[NSArray class]] && object[@"pages"])
+        {
+            NSMutableArray *shots = [NSMutableArray array];
+            for (NSDictionary *shot in object[@"shots"])
+            {
+                [shots addObject:[LTShot modelObjectWithDictionary:shot]];
+            }
+            LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
+            return [LTDribbbleResults resultsWithItems:shots pagination:pagination];
+        }
+        // Comments with pagination
+        else if (object[@"comments"] && [object[@"comments"] isKindOfClass:[NSArray class]] && object[@"pages"])
+        {
+            NSMutableArray *comments = [NSMutableArray array];
+            for (NSDictionary *comment in object[@"comments"])
+            {
+                [comments addObject:[LTComment modelObjectWithDictionary:comment]];
+            }
+            LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
+            return [LTDribbbleResults resultsWithItems:comments pagination:pagination];
+        }
+        // Players with pagination
+        else if (object[@"players"] && [object[@"players"] isKindOfClass:[NSArray class]] && object[@"pages"])
+        {
+            NSMutableArray *players = [NSMutableArray array];
+            for (NSDictionary *player in object[@"players"]) {
+                [players addObject:[LTPlayer modelObjectWithDictionary:player]];
+            }
+            LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
+            return [LTDribbbleResults resultsWithItems:players pagination:pagination];
+        }
+        // A player
+        else if (object[@"username"])
+        {
+            return [LTPlayer modelObjectWithDictionary:object];
         }
     }
     

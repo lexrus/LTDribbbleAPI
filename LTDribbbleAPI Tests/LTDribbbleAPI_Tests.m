@@ -37,13 +37,101 @@
 
 - (void) testShotById
 {
-    [D shotById:1283051 :^(LTShot *shot, NSError *error) {
+    [D shot:1283051 :^(LTShot *shot, NSError *error) {
         XCTAssertNotNil(shot, @"Shot must not be nil!");
         XCTAssertTrue(shot.title && shot.title.length > 0, @"Shot must has a title!");
         XCTAssertNil(error, @"Failed to fetch shot!");
         @kill
     }];
-    @wait(5)
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testReboundsByShotId
+{
+    [D rebounds:43424 :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTShot*)results.items.firstObject title].length > 0, @"The title of the first result must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testPopularShots
+{
+    [D popularShots:^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTShot*)results.items.firstObject title].length > 0, @"The title of the first result must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testShotsOfFollowing
+{
+    [D shotsOfFollowing:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTShot*)results.items.firstObject title].length > 0, @"The title of the first result must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testCommentsByShotId
+{
+    [D comments:1283051 :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTComment*)results.items.firstObject player].name.length > 0, @"The player of the first comment must has a name!");
+        XCTAssertNil(error, @"Failed to fetch comments!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testShotsOfPlayer
+{
+    [D shotsOfPlayer:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTShot*)results.items.firstObject title].length > 0, @"The title of the first result must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testShotsPlayerLikes
+{
+    [D shotsPlayerLikes:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTShot*)results.items.firstObject title].length > 0, @"The title of the first result must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testPlayerById
+{
+    [D player:@"simplebits" :^(LTPlayer *player, NSError *error) {
+        XCTAssertTrue(player.username.length > 0, @"Username must not be empty!");
+        XCTAssertTrue(player.avatarUrl.length > 0, @"Player must has a avatar!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+}
+
+- (void) testPlayerFollowers
+{
+    [D playerFollowers:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
+        XCTAssertTrue([(LTPlayer*)results.items.firstObject username].length > 0, @"The username of the first player must not be empty!");
+        XCTAssertNil(error, @"Failed to fetch rebounds!");
+        @kill
+    }];
+    @wait(MAX_DELAY_FOR_ASYNC_TEST)
 }
 
 @end
