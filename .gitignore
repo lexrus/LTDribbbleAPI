@@ -1,5 +1,3 @@
-*LocalOverrides.h
-
 # Node.js modules
 node_modules/*
 
@@ -30,6 +28,7 @@ Podfile.lock
 VersionX-revision.h
 
 # Exclude the build products
+DerivedData/*
 build/*
 build.output
 pkg/*
