@@ -1,12 +1,12 @@
 namespace :test do
   desc "Run the LTDribbbleAPI Tests for iOS"
   task :ios do
-  	$ios_success = system("xctool -project LTDribbbleAPI.xcodeproj -scheme 'LTDribbbleAPI iOS Tests' -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator")
+  	$ios_success = system("xctool -project LTDribbbleAPI.xcodeproj -scheme 'LTDribbbleAPI iOS Tests' -sdk iphonesimulator -configuration Debug test -test-sdk iphonesimulator")
   end
 
   desc "Run the LTDribbbleAPI Tests for Mac OS X"
   task :osx do
-  	$osx_success = system("xctool -project LTDribbbleAPI.xcodeproj -scheme 'LTDribbbleAPI OS X Tests' -sdk macosx -configuration Release test -test-sdk macosx")
+  	$osx_success = system("xctool -project LTDribbbleAPI.xcodeproj -scheme 'LTDribbbleAPI OS X Tests' -sdk macosx -configuration Debug test -test-sdk macosx")
   end
 end
 

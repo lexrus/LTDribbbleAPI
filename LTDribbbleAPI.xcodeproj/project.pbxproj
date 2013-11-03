@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D717A28B18253E240046BF2C /* LTDribbbleResults.m in Sources */ = {isa = PBXBuildFile; fileRef = D717A28A18253E240046BF2C /* LTDribbbleResults.m */; };
-		D71E98761822B752005D87C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E98751822B752005D87C5 /* XCTest.framework */; };
 		D71E987C1822B752005D87C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D71E987A1822B752005D87C5 /* InfoPlist.strings */; };
 		D71E987E1822B752005D87C5 /* LTDribbbleAPI_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */; };
 		D71E98881822B986005D87C5 /* XCTestCase+AsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98871822B986005D87C5 /* XCTestCase+AsynchronousTests.m */; };
@@ -25,11 +24,6 @@
 		D759AB091823FFD700EA4232 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98621822B71E005D87C5 /* AFURLRequestSerialization.m */; };
 		D759AB0B1823FFD700EA4232 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98641822B71E005D87C5 /* AFURLResponseSerialization.m */; };
 		D759AB0D1823FFF300EA4232 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E985E1822B71E005D87C5 /* AFSecurityPolicy.m */; };
-		D759AB0F1824000B00EA4232 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB0E1824000B00EA4232 /* CFNetwork.framework */; };
-		D759AB121824003500EA4232 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB111824003500EA4232 /* SystemConfiguration.framework */; };
-		D759AB141824004000EA4232 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB131824004000EA4232 /* CoreServices.framework */; };
-		D79263801824006800D41620 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792637F1824006800D41620 /* Security.framework */; };
-		D7C3005F182615A6005FA599 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D7C3006218261686005FA599 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E985E1822B71E005D87C5 /* AFSecurityPolicy.m */; };
 		D7C3006318261686005FA599 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98551822B71E005D87C5 /* AFHTTPRequestOperation.m */; };
 		D7C3006418261686005FA599 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98571822B71E005D87C5 /* AFHTTPRequestOperationManager.m */; };
@@ -46,13 +40,20 @@
 		D7C3006F18261686005FA599 /* XCTestCase+AsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98871822B986005D87C5 /* XCTestCase+AsynchronousTests.m */; };
 		D7C3007018261686005FA599 /* LTDribbbleAPI_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */; };
 		D7C3007118261686005FA599 /* LTDribbbleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988A1822B9E8005D87C5 /* LTDribbbleAPI.m */; };
-		D7C3007318261686005FA599 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D7C3007318261686005FA599 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D7C3007418261686005FA599 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792637F1824006800D41620 /* Security.framework */; };
 		D7C3007518261686005FA599 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB131824004000EA4232 /* CoreServices.framework */; };
 		D7C3007618261686005FA599 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB111824003500EA4232 /* SystemConfiguration.framework */; };
 		D7C3007718261686005FA599 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB0E1824000B00EA4232 /* CFNetwork.framework */; };
 		D7C3007818261686005FA599 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E98751822B752005D87C5 /* XCTest.framework */; };
 		D7C3007A18261686005FA599 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D71E987A1822B752005D87C5 /* InfoPlist.strings */; };
+		D7C30082182616D6005FA599 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C30081182616D6005FA599 /* UIKit.framework */; };
+		D7C30084182617B9005FA599 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C30083182617B9005FA599 /* MobileCoreServices.framework */; };
+		D7C30086182617BE005FA599 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C30085182617BE005FA599 /* SystemConfiguration.framework */; };
+		D7C30088182617C3005FA599 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C30087182617C3005FA599 /* CoreGraphics.framework */; };
+		D7C3008A182617CA005FA599 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C30089182617CA005FA599 /* CFNetwork.framework */; };
+		D7C3008C182617F5005FA599 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E98751822B752005D87C5 /* XCTest.framework */; };
+		D7C3009218268B3C005FA599 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C3009118268B3C005FA599 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,9 +79,8 @@
 		D71E98641822B71E005D87C5 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		D71E98651822B71E005D87C5 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		D71E98661822B71E005D87C5 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		D71E98741822B752005D87C5 /* LTDribbbleAPI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LTDribbbleAPI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71E98741822B752005D87C5 /* LTDribbbleAPI iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LTDribbbleAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71E98751822B752005D87C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D71E98791822B752005D87C5 /* LTDribbbleAPI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LTDribbbleAPI Tests-Info.plist"; sourceTree = "<group>"; };
 		D71E987B1822B752005D87C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTDribbbleAPI_Tests.m; sourceTree = "<group>"; };
 		D71E987F1822B752005D87C5 /* LTDribbbleAPI Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LTDribbbleAPI Tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -105,8 +105,15 @@
 		D792637F1824006800D41620 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D79263811824007A00D41620 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D7926383182400BA00D41620 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LTDribbbleAPI Tests copy.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7C3008018261687005FA599 /* LTDribbbleAPI Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LTDribbbleAPI Tests copy-Info.plist"; path = "/Users/lex/apps/LTDribbbleAPI/LTDribbbleAPI Tests copy-Info.plist"; sourceTree = "<absolute>"; };
+		D7C3007F18261686005FA599 /* LTDribbbleAPI OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LTDribbbleAPI OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C30081182616D6005FA599 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7C30083182617B9005FA599 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		D7C30085182617BE005FA599 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D7C30087182617C3005FA599 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		D7C30089182617CA005FA599 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D7C3008D182619E8005FA599 /* LTDribbbleAPI OS X Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LTDribbbleAPI OS X Tests-Info.plist"; sourceTree = "<group>"; };
+		D7C3008F182619F4005FA599 /* LTDribbbleAPI iOS Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LTDribbbleAPI iOS Tests-Info.plist"; sourceTree = "<group>"; };
+		D7C3009118268B3C005FA599 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +121,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C3005F182615A6005FA599 /* Cocoa.framework in Frameworks */,
-				D79263801824006800D41620 /* Security.framework in Frameworks */,
-				D759AB141824004000EA4232 /* CoreServices.framework in Frameworks */,
-				D759AB121824003500EA4232 /* SystemConfiguration.framework in Frameworks */,
-				D759AB0F1824000B00EA4232 /* CFNetwork.framework in Frameworks */,
-				D71E98761822B752005D87C5 /* XCTest.framework in Frameworks */,
+				D7C3009218268B3C005FA599 /* Security.framework in Frameworks */,
+				D7C3008C182617F5005FA599 /* XCTest.framework in Frameworks */,
+				D7C3008A182617CA005FA599 /* CFNetwork.framework in Frameworks */,
+				D7C30088182617C3005FA599 /* CoreGraphics.framework in Frameworks */,
+				D7C30086182617BE005FA599 /* SystemConfiguration.framework in Frameworks */,
+				D7C30084182617B9005FA599 /* MobileCoreServices.framework in Frameworks */,
+				D7C30082182616D6005FA599 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,15 +155,14 @@
 				D71E98521822B71E005D87C5 /* Vendors */,
 				D71E98431822AC7B005D87C5 /* Frameworks */,
 				D71E98421822AC7B005D87C5 /* Products */,
-				D7C3008018261687005FA599 /* LTDribbbleAPI Tests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		D71E98421822AC7B005D87C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D71E98741822B752005D87C5 /* LTDribbbleAPI Tests.xctest */,
-				D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */,
+				D71E98741822B752005D87C5 /* LTDribbbleAPI iOS Tests.xctest */,
+				D7C3007F18261686005FA599 /* LTDribbbleAPI OS X Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +170,12 @@
 		D71E98431822AC7B005D87C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7C3009118268B3C005FA599 /* Security.framework */,
+				D7C30089182617CA005FA599 /* CFNetwork.framework */,
+				D7C30087182617C3005FA599 /* CoreGraphics.framework */,
+				D7C30085182617BE005FA599 /* SystemConfiguration.framework */,
+				D7C30083182617B9005FA599 /* MobileCoreServices.framework */,
+				D7C30081182616D6005FA599 /* UIKit.framework */,
 				D7926383182400BA00D41620 /* Cocoa.framework */,
 				D79263811824007A00D41620 /* CoreGraphics.framework */,
 				D792637F1824006800D41620 /* Security.framework */,
@@ -244,7 +257,8 @@
 		D71E98781822B752005D87C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D71E98791822B752005D87C5 /* LTDribbbleAPI Tests-Info.plist */,
+				D7C3008F182619F4005FA599 /* LTDribbbleAPI iOS Tests-Info.plist */,
+				D7C3008D182619E8005FA599 /* LTDribbbleAPI OS X Tests-Info.plist */,
 				D71E987A1822B752005D87C5 /* InfoPlist.strings */,
 				D71E987F1822B752005D87C5 /* LTDribbbleAPI Tests-Prefix.pch */,
 			);
@@ -278,7 +292,7 @@
 			);
 			name = "LTDribbbleAPI iOS Tests";
 			productName = "LTDribbbleAPI Tests";
-			productReference = D71E98741822B752005D87C5 /* LTDribbbleAPI Tests.xctest */;
+			productReference = D71E98741822B752005D87C5 /* LTDribbbleAPI iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D7C3006018261686005FA599 /* LTDribbbleAPI OS X Tests */ = {
@@ -296,7 +310,7 @@
 			);
 			name = "LTDribbbleAPI OS X Tests";
 			productName = "LTDribbbleAPI Tests";
-			productReference = D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */;
+			productReference = D7C3007F18261686005FA599 /* LTDribbbleAPI OS X Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -471,6 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -503,6 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -511,9 +527,11 @@
 		D71E98831822B752005D87C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
@@ -521,9 +539,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Info.plist";
+				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI iOS Tests-Info.plist";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -531,15 +551,18 @@
 		D71E98841822B752005D87C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
-				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Info.plist";
+				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI iOS Tests-Info.plist";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -557,8 +580,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LTDribbbleAPI Tests copy-Info.plist";
-				PRODUCT_NAME = "LTDribbbleAPI Tests copy";
+				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI OS X Tests-Info.plist";
+				PRODUCT_NAME = "LTDribbbleAPI OS X Tests";
 				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -573,8 +596,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
-				INFOPLIST_FILE = "LTDribbbleAPI Tests copy-Info.plist";
-				PRODUCT_NAME = "LTDribbbleAPI Tests copy";
+				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI OS X Tests-Info.plist";
+				PRODUCT_NAME = "LTDribbbleAPI OS X Tests";
 				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -590,7 +613,7 @@
 				D71E984E1822AC7B005D87C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D71E98821822B752005D87C5 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI iOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -599,7 +622,7 @@
 				D71E98841822B752005D87C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D7C3007C18261686005FA599 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI OS X Tests" */ = {
 			isa = XCConfigurationList;
@@ -608,7 +631,7 @@
 				D7C3007E18261686005FA599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
