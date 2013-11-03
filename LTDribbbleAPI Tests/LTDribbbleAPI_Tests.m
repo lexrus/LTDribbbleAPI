@@ -48,7 +48,7 @@
 
 - (void) testReboundsByShotId
 {
-    [D rebounds:43424 :^(LTDribbbleResults *results, NSError *error) {
+    [D rebounds:43424 page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
@@ -59,7 +59,8 @@
 
 - (void) testPopularShots
 {
-    [D popularShots:^(LTDribbbleResults *results, NSError *error) {
+    [D popularShots:1 :^(LTDribbbleResults *results, NSError *error) {
+        XCTAssertTrue(results.pagination.perPage == 30, @"Results must be 30 shots per page.");
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
@@ -70,7 +71,7 @@
 
 - (void) testShotsOfFollowing
 {
-    [D shotsOfFollowing:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
+    [D shotsOfFollowing:@"lexrus" page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
@@ -81,7 +82,7 @@
 
 - (void) testCommentsByShotId
 {
-    [D comments:1283051 :^(LTDribbbleResults *results, NSError *error) {
+    [D comments:1283051 page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTComment*)results.items.lastObject player].name.length > 0, @"The player of the last comment must has a name!");
         XCTAssertNil(error, @"Failed to fetch comments!");
@@ -92,7 +93,7 @@
 
 - (void) testShotsOfPlayer
 {
-    [D shotsOfPlayer:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
+    [D shotsOfPlayer:@"simplebits" page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
@@ -103,7 +104,7 @@
 
 - (void) testShotsPlayerLikes
 {
-    [D shotsPlayerLikes:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
+    [D shotsPlayerLikes:@"lexrus" page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
@@ -125,7 +126,7 @@
 
 - (void) testPlayerFollowers
 {
-    [D playerFollowers:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
+    [D playerFollowers:@"simplebits" page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
         XCTAssertTrue([(LTDribbblePlayer *)results.items.lastObject username].length > 0, @"The username of the last player must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");

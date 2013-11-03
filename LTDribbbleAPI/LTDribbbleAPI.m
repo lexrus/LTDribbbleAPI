@@ -10,6 +10,8 @@
 #import "LTDribbbleResponseSerializer.h"
 
 #define f(fmt, val) [NSString stringWithFormat : fmt, val]
+#define pageParamater(pageIndex) @{@"per_page": @(self.perPage), @"page": @(pageIndex)}
+#define kUserAgent @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71"
 
 NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
 
@@ -25,6 +27,7 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
         __instance.securityPolicy.allowInvalidCertificates = YES;
         __instance.perPage = 30;
         __instance.responseSerializer = [LTDribbbleResponseSerializer serializer];
+        [__instance.requestSerializer setValue:kUserAgent forHTTPHeaderField:@"User-Agent"];
         
         NSOperationQueue *operationQueue = __instance.operationQueue;
         [__instance.reachabilityManager setReachabilityStatusChangeBlock: ^(AFNetworkReachabilityStatus status) {
@@ -46,7 +49,8 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
 
 - (void) shot:(uint)aShotId :(LTResultBlock)resultBlock
 {
-    [self GET:f(rShotById, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleShot *shot) {
+    [self GET:f(rShotById, aShotId) parameters:nil
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleShot *shot) {
         if (resultBlock)
         {
             resultBlock(shot, nil);
@@ -59,9 +63,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) rebounds:(uint)aShotId :(LTResultsBlock)resultsBlock
+- (void) rebounds:(uint)aShotId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rShotRebounds, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rShotRebounds, aShotId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -74,9 +79,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) shots:(NSString *)listType :(LTResultsBlock)resultsBlock
+- (void) shots:(NSString *)listType page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:listType parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:listType parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -89,24 +95,25 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) popularShots:(LTResultsBlock)resultsBlock
+- (void) popularShots:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self shots:rPopularShots:resultsBlock];
+    [self shots:rPopularShots page:page :resultsBlock];
 }
 
-- (void) everyoneShots:(LTResultsBlock)resultsBlock
+- (void) everyoneShots:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self shots:rEveryoneShots:resultsBlock];
+    [self shots:rEveryoneShots page:page :resultsBlock];
 }
 
-- (void) debutsShots:(LTResultsBlock)resultsBlock
+- (void) debutsShots:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self shots:rDebutsShots:resultsBlock];
+    [self shots:rDebutsShots page:page :resultsBlock];
 }
 
-- (void) shotsOfFollowing:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsOfFollowing:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rFollowingShots, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rFollowingShots, aPlayerId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -119,9 +126,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) comments:(uint)aShotId :(LTResultsBlock)resultsBlock
+- (void) comments:(uint)aShotId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rShotComments, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rShotComments, aShotId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -134,9 +142,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) shotsOfPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsOfPlayer:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rPlayerShots, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rPlayerShots, aPlayerId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -149,9 +158,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) shotsPlayerLikes:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) shotsPlayerLikes:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(rPlayerLikes, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(rPlayerLikes, aPlayerId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -179,9 +189,10 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) playersOfType:(NSString *)relationType ofPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersOfType:(NSString *)relationType page:(uint)page ofPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
 {
-    [self GET:f(relationType, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
+    [self GET:f(relationType, aPlayerId) parameters:pageParamater(page)
+      success: ^(AFHTTPRequestOperation *operation, LTDribbbleResults *results) {
         if (resultsBlock)
         {
             resultsBlock(results, nil);
@@ -194,19 +205,19 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
     }];
 }
 
-- (void) playerFollowers:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playerFollowers:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerFollowers ofPlayer:aPlayerId:resultsBlock];
+    [self playersOfType:rPlayerFollowers page:page ofPlayer:aPlayerId:resultsBlock];
 }
 
-- (void) playersFollowedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersFollowedBy:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerFollowing ofPlayer:aPlayerId:resultsBlock];
+    [self playersOfType:rPlayerFollowing page:page ofPlayer:aPlayerId:resultsBlock];
 }
 
-- (void) playersDraftedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock
+- (void) playersDraftedBy:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock
 {
-    [self playersOfType:rPlayerDraftees ofPlayer:aPlayerId:resultsBlock];
+    [self playersOfType:rPlayerDraftees page:page ofPlayer:aPlayerId:resultsBlock];
 }
 
 @end

@@ -44,42 +44,42 @@ typedef void (^LTResultsBlock)(LTDribbbleResults *results, NSError *error);
 /**
  *  Returns the set of rebounds (shots in response to a shot) for the shot specified by :aShotId.
  */
-- (void) rebounds:(uint)aShotId :(LTResultsBlock)resultsBlock;
+- (void) rebounds:(uint)aShotId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the list of popular shots
  */
-- (void) popularShots:(LTResultsBlock)resultsBlock;
+- (void) popularShots:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the list of everyone shots
  */
-- (void) everyoneShots:(LTResultsBlock)resultsBlock;
+- (void) everyoneShots:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the list of debuts shots
  */
-- (void) debutsShots:(LTResultsBlock)resultsBlock;
+- (void) debutsShots:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the most recent shots published by those the player specified by :aPlayerId is following.
  */
-- (void) shotsOfFollowing:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) shotsOfFollowing:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the set of comments for the shot specified by :aShotId.
  */
-- (void) comments:(uint)aShotId :(LTResultsBlock)resultsBlock;
+- (void) comments:(uint)aShotId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the most recent shots for the player specified by :aPlayerId.
  */
-- (void) shotsOfPlayer:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) shotsOfPlayer:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns shots liked by the player specified by :aPlayerId.
  */
-- (void) shotsPlayerLikes:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) shotsPlayerLikes:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns profile details for a player specified by :aPlayerId.
@@ -89,16 +89,16 @@ typedef void (^LTResultsBlock)(LTDribbbleResults *results, NSError *error);
 /**
  *  Returns the list of followers for a player specified by :aPlayerId.
  */
-- (void) playerFollowers:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) playerFollowers:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the list of players followed by the player specified by :aPlayerId.
  */
-- (void) playersFollowedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) playersFollowedBy:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 /**
  *  Returns the list of players drafted by the player specified by :aPlayerId.
  */
-- (void) playersDraftedBy:(NSString *)aPlayerId :(LTResultsBlock)resultsBlock;
+- (void) playersDraftedBy:(NSString *)aPlayerId page:(uint)page :(LTResultsBlock)resultsBlock;
 
 @end
