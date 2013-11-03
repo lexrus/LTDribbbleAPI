@@ -1,5 +1,9 @@
 # LTDribbbleAPI
 
+
+[![Build Status](https://travis-ci.org/lexrus/LTDribbbleAPI.png)](https://travis-ci.org/lexrus/LTDribbbleAPI.png)
+
+
 Yet another Dribbble API client based on AFNetworking 2.0.
 
 ## Install
