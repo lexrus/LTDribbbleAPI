@@ -1,5 +1,6 @@
 language: objective-c
 before_install:
     - brew update
-    - brew install xctool
-script: xctool -project LTDribbbleAPI.xcodeproj -scheme "LTDribbbleAPI Tests"
+    - brew uninstall xctool && brew install xctool --HEAD
+    - cd $TRAVIS_BUILD_DIR
+script: rake test

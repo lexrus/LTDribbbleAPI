@@ -18,13 +18,18 @@ Yet another Dribbble API client based on AFNetworking 2.0.
 
 ``` objc
 [[LTDribbbleAPI shared] shotsOfPlayer:@"simplebits" page:1 :^(LTDribbbleResults *results, NSError *error) {
-        if (noErr = error.code) {
+        if (noErr == error.code) {
             NSLog(@"%i", results.pagination.pages);
             NSLog(@"%@", [(LTShot*)results.items.lastObject title]);
         }
     }];
 
 ```
+
+## Tests
+
+```brew uninstall xctool && brew install xctool --HEAD
+```rake```
 
 
 ## LICENSE
