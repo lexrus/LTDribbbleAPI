@@ -1,10 +1,11 @@
 # LTDribbbleAPI
 
+Yet another Dribbble API client based on AFNetworking 2.0.
+
 
 [![Build Status](https://travis-ci.org/lexrus/LTDribbbleAPI.png)](https://travis-ci.org/lexrus/LTDribbbleAPI.png)
 
 
-Yet another Dribbble API client based on AFNetworking 2.0.
 
 ## Install
 
@@ -28,8 +29,9 @@ Yet another Dribbble API client based on AFNetworking 2.0.
 
 ## Tests
 
-```brew uninstall xctool && brew install xctool --HEAD
-```rake```
+```brew uninstall xctool && brew install xctool --HEAD```
+
+```rake test```
 
 
 ## LICENSE

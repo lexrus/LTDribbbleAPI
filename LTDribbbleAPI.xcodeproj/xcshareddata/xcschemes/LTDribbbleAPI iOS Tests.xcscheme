@@ -17,7 +17,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D71E98731822B752005D87C5"
-               BuildableName = "LTDribbbleAPI Tests.xctest"
+               BuildableName = "LTDribbbleAPI iOS Tests.xctest"
                BlueprintName = "LTDribbbleAPI iOS Tests"
                ReferencedContainer = "container:LTDribbbleAPI.xcodeproj">
             </BuildableReference>

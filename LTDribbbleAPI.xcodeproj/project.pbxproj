@@ -543,7 +543,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -563,6 +563,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s x86_64 i386";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -582,7 +583,7 @@
 				);
 				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI OS X Tests-Info.plist";
 				PRODUCT_NAME = "LTDribbbleAPI OS X Tests";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -598,7 +599,7 @@
 				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
 				INFOPLIST_FILE = "LTDribbbleAPI Tests/LTDribbbleAPI OS X Tests-Info.plist";
 				PRODUCT_NAME = "LTDribbbleAPI OS X Tests";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
