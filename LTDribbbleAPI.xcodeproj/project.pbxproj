@@ -29,7 +29,30 @@
 		D759AB121824003500EA4232 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB111824003500EA4232 /* SystemConfiguration.framework */; };
 		D759AB141824004000EA4232 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB131824004000EA4232 /* CoreServices.framework */; };
 		D79263801824006800D41620 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792637F1824006800D41620 /* Security.framework */; };
-		D7926384182400BA00D41620 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; };
+		D7C3005F182615A6005FA599 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D7C3006218261686005FA599 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E985E1822B71E005D87C5 /* AFSecurityPolicy.m */; };
+		D7C3006318261686005FA599 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98551822B71E005D87C5 /* AFHTTPRequestOperation.m */; };
+		D7C3006418261686005FA599 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98571822B71E005D87C5 /* AFHTTPRequestOperationManager.m */; };
+		D7C3006518261686005FA599 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E985C1822B71E005D87C5 /* AFNetworkReachabilityManager.m */; };
+		D7C3006618261686005FA599 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98601822B71E005D87C5 /* AFURLConnectionOperation.m */; };
+		D7C3006718261686005FA599 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98621822B71E005D87C5 /* AFURLRequestSerialization.m */; };
+		D7C3006818261686005FA599 /* LTDribbbleResults.m in Sources */ = {isa = PBXBuildFile; fileRef = D717A28A18253E240046BF2C /* LTDribbbleResults.m */; };
+		D7C3006918261686005FA599 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98641822B71E005D87C5 /* AFURLResponseSerialization.m */; };
+		D7C3006A18261686005FA599 /* LTDribbbleShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */; };
+		D7C3006B18261686005FA599 /* LTDribbblePagination.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */; };
+		D7C3006C18261686005FA599 /* LTDribbbleResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988D1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m */; };
+		D7C3006D18261686005FA599 /* LTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTComment.m */; };
+		D7C3006E18261686005FA599 /* LTDribbblePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */; };
+		D7C3006F18261686005FA599 /* XCTestCase+AsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98871822B986005D87C5 /* XCTestCase+AsynchronousTests.m */; };
+		D7C3007018261686005FA599 /* LTDribbbleAPI_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */; };
+		D7C3007118261686005FA599 /* LTDribbbleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988A1822B9E8005D87C5 /* LTDribbbleAPI.m */; };
+		D7C3007318261686005FA599 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7926383182400BA00D41620 /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D7C3007418261686005FA599 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792637F1824006800D41620 /* Security.framework */; };
+		D7C3007518261686005FA599 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB131824004000EA4232 /* CoreServices.framework */; };
+		D7C3007618261686005FA599 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB111824003500EA4232 /* SystemConfiguration.framework */; };
+		D7C3007718261686005FA599 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D759AB0E1824000B00EA4232 /* CFNetwork.framework */; };
+		D7C3007818261686005FA599 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E98751822B752005D87C5 /* XCTest.framework */; };
+		D7C3007A18261686005FA599 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D71E987A1822B752005D87C5 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +105,8 @@
 		D792637F1824006800D41620 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D79263811824007A00D41620 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D7926383182400BA00D41620 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LTDribbbleAPI Tests copy.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C3008018261687005FA599 /* LTDribbbleAPI Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LTDribbbleAPI Tests copy-Info.plist"; path = "/Users/lex/apps/LTDribbbleAPI/LTDribbbleAPI Tests copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +114,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7926384182400BA00D41620 /* Cocoa.framework in Frameworks */,
+				D7C3005F182615A6005FA599 /* Cocoa.framework in Frameworks */,
 				D79263801824006800D41620 /* Security.framework in Frameworks */,
 				D759AB141824004000EA4232 /* CoreServices.framework in Frameworks */,
 				D759AB121824003500EA4232 /* SystemConfiguration.framework in Frameworks */,
 				D759AB0F1824000B00EA4232 /* CFNetwork.framework in Frameworks */,
 				D71E98761822B752005D87C5 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C3007218261686005FA599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C3007318261686005FA599 /* Cocoa.framework in Frameworks */,
+				D7C3007418261686005FA599 /* Security.framework in Frameworks */,
+				D7C3007518261686005FA599 /* CoreServices.framework in Frameworks */,
+				D7C3007618261686005FA599 /* SystemConfiguration.framework in Frameworks */,
+				D7C3007718261686005FA599 /* CFNetwork.framework in Frameworks */,
+				D7C3007818261686005FA599 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +147,7 @@
 				D71E98521822B71E005D87C5 /* Vendors */,
 				D71E98431822AC7B005D87C5 /* Frameworks */,
 				D71E98421822AC7B005D87C5 /* Products */,
+				D7C3008018261687005FA599 /* LTDribbbleAPI Tests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D71E98741822B752005D87C5 /* LTDribbbleAPI Tests.xctest */,
+				D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D71E98731822B752005D87C5 /* LTDribbbleAPI Tests */ = {
+		D71E98731822B752005D87C5 /* LTDribbbleAPI iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D71E98821822B752005D87C5 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI Tests" */;
+			buildConfigurationList = D71E98821822B752005D87C5 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI iOS Tests" */;
 			buildPhases = (
 				D71E98701822B752005D87C5 /* Sources */,
 				D71E98711822B752005D87C5 /* Frameworks */,
@@ -236,9 +276,27 @@
 			);
 			dependencies = (
 			);
-			name = "LTDribbbleAPI Tests";
+			name = "LTDribbbleAPI iOS Tests";
 			productName = "LTDribbbleAPI Tests";
 			productReference = D71E98741822B752005D87C5 /* LTDribbbleAPI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7C3006018261686005FA599 /* LTDribbbleAPI OS X Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7C3007C18261686005FA599 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI OS X Tests" */;
+			buildPhases = (
+				D7C3006118261686005FA599 /* Sources */,
+				D7C3007218261686005FA599 /* Frameworks */,
+				D7C3007918261686005FA599 /* Resources */,
+				D7C3007B18261686005FA599 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LTDribbbleAPI OS X Tests";
+			productName = "LTDribbbleAPI Tests";
+			productReference = D7C3007F18261686005FA599 /* LTDribbbleAPI Tests copy.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -267,7 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D71E98731822B752005D87C5 /* LTDribbbleAPI Tests */,
+				D71E98731822B752005D87C5 /* LTDribbbleAPI iOS Tests */,
+				D7C3006018261686005FA599 /* LTDribbbleAPI OS X Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,10 +340,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7C3007918261686005FA599 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C3007A18261686005FA599 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		D759AB101824001E00EA4232 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" -type f \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+		D7C3007B18261686005FA599 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,6 +400,29 @@
 				D71E98881822B986005D87C5 /* XCTestCase+AsynchronousTests.m in Sources */,
 				D71E987E1822B752005D87C5 /* LTDribbbleAPI_Tests.m in Sources */,
 				D71E988B1822B9E8005D87C5 /* LTDribbbleAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C3006118261686005FA599 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C3006218261686005FA599 /* AFSecurityPolicy.m in Sources */,
+				D7C3006318261686005FA599 /* AFHTTPRequestOperation.m in Sources */,
+				D7C3006418261686005FA599 /* AFHTTPRequestOperationManager.m in Sources */,
+				D7C3006518261686005FA599 /* AFNetworkReachabilityManager.m in Sources */,
+				D7C3006618261686005FA599 /* AFURLConnectionOperation.m in Sources */,
+				D7C3006718261686005FA599 /* AFURLRequestSerialization.m in Sources */,
+				D7C3006818261686005FA599 /* LTDribbbleResults.m in Sources */,
+				D7C3006918261686005FA599 /* AFURLResponseSerialization.m in Sources */,
+				D7C3006A18261686005FA599 /* LTDribbbleShot.m in Sources */,
+				D7C3006B18261686005FA599 /* LTDribbblePagination.m in Sources */,
+				D7C3006C18261686005FA599 /* LTDribbbleResponseSerializer.m in Sources */,
+				D7C3006D18261686005FA599 /* LTComment.m in Sources */,
+				D7C3006E18261686005FA599 /* LTDribbblePlayer.m in Sources */,
+				D7C3006F18261686005FA599 /* XCTestCase+AsynchronousTests.m in Sources */,
+				D7C3007018261686005FA599 /* LTDribbbleAPI_Tests.m in Sources */,
+				D7C3007118261686005FA599 /* LTDribbbleAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +544,42 @@
 			};
 			name = Release;
 		};
+		D7C3007D18261686005FA599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LTDribbbleAPI Tests copy-Info.plist";
+				PRODUCT_NAME = "LTDribbbleAPI Tests copy";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D7C3007E18261686005FA599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LTDribbbleAPI Tests/LTDribbbleAPI Tests-Prefix.pch";
+				INFOPLIST_FILE = "LTDribbbleAPI Tests copy-Info.plist";
+				PRODUCT_NAME = "LTDribbbleAPI Tests copy";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,11 +592,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D71E98821822B752005D87C5 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI Tests" */ = {
+		D71E98821822B752005D87C5 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D71E98831822B752005D87C5 /* Debug */,
 				D71E98841822B752005D87C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7C3007C18261686005FA599 /* Build configuration list for PBXNativeTarget "LTDribbbleAPI OS X Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C3007D18261686005FA599 /* Debug */,
+				D7C3007E18261686005FA599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
