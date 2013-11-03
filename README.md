@@ -1,11 +1,18 @@
 # LTDribbbleAPI
 
-Yet another Dribbble API client based on AFNetworking 2.0.
+Yet another [Dribbble API](http://dribbble.com/api) client for iOS 6.0+ and Mac OS X 10.8+ based on [AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking).
 
 
-## Installation
+## Installation with CocoaPods
 
-```pod 'LTDribbbleAPI', '~> 0.0.1'```
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
+
+#### Podfile
+
+``` ruby
+platform :ios, '7.0'
+pod 'LTDribbbleAPI', '~> 0.0.1'
+```
 
 ## Usage
 
@@ -15,19 +22,31 @@ Yet another Dribbble API client based on AFNetworking 2.0.
 
 ``` objc
 [[LTDribbbleAPI shared] shotsOfPlayer:@"simplebits" page:1 :^(LTDribbbleResults *results, NSError *error) {
-        if (noErr == error.code) {
-            NSLog(@"%i", results.pagination.pages);
-            NSLog(@"%@", [(LTShot*)results.items.lastObject title]);
-        }
-    }];
+    if (noErr == error.code) {
+        NSLog(@"%i", results.pagination.pages);
+        NSLog(@"%@", [(LTShot*)results.items.lastObject title]);
+    }
+}];
 
 ```
 
-## Tests
+## Unit Tests
 
-```brew uninstall xctool && brew install xctool --HEAD```
+#### Xcode 5
 
-```rake test```
+Hit command + u in Xcode 5 to start XCTest.
+
+#### xctool
+I recommend you [xctool](https://github.com/facebook/xctool) if you prefer command line tests:
+
+* ```brew update```
+* ```brew uninstall xctool && brew install xctool --HEAD```
+* ```rake test```
+
+
+## Credits
+
+LTDribbbleAPI was originally created by [Lex Tang](http://lextang.com/)([@lexrus](https://twitter.com/lexrus)) in the development of Drafffted for iPhone (N/A yet).
 
 
 ## License
