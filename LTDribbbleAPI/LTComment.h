@@ -7,14 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class LTPlayer;
+@class LTDribbblePlayer;
 
 @interface LTComment : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *body;
 @property (nonatomic, assign) double internalBaseClassIdentifier;
 @property (nonatomic, assign) double likesCount;
-@property (nonatomic, strong) LTPlayer *player;
+@property (nonatomic, strong) LTDribbblePlayer *player;
 @property (nonatomic, strong) NSString *createdAt;
 
 + (LTComment *) modelObjectWithDictionary:(NSDictionary *)dict;

@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 LexTang.com. All rights reserved.
 //
 
-#import "LTPlayer.h"
+#import "LTDribbblePlayer.h"
 #import "LTComment.h"
-#import "LTShot.h"
+#import "LTDribbbleShot.h"
 #import "LTDribbbleResults.h"

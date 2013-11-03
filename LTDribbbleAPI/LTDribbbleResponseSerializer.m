@@ -52,7 +52,7 @@
         // A shot
         else if (object[@"title"] && object[@"width"])
         {
-            return [LTShot modelObjectWithDictionary:object];
+            return [LTDribbbleShot modelObjectWithDictionary:object];
         }
         // Results with pagination
         else if (object[@"shots"] && [object[@"shots"] isKindOfClass:[NSArray class]] && object[@"pages"])
@@ -60,7 +60,7 @@
             NSMutableArray *shots = [NSMutableArray array];
             for (NSDictionary *shot in object[@"shots"])
             {
-                [shots addObject:[LTShot modelObjectWithDictionary:shot]];
+                [shots addObject:[LTDribbbleShot modelObjectWithDictionary:shot]];
             }
             LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
             return [LTDribbbleResults resultsWithItems:shots pagination:pagination];
@@ -82,7 +82,7 @@
             NSMutableArray *players = [NSMutableArray array];
             for (NSDictionary *player in object[@"players"])
             {
-                [players addObject:[LTPlayer modelObjectWithDictionary:player]];
+                [players addObject:[LTDribbblePlayer modelObjectWithDictionary:player]];
             }
             LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
             return [LTDribbbleResults resultsWithItems:players pagination:pagination];
@@ -90,7 +90,7 @@
         // A player
         else if (object[@"username"])
         {
-            return [LTPlayer modelObjectWithDictionary:object];
+            return [LTDribbblePlayer modelObjectWithDictionary:object];
         }
     }
     

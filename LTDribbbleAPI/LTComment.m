@@ -6,7 +6,7 @@
 //
 
 #import "LTComment.h"
-#import "LTPlayer.h"
+#import "LTDribbblePlayer.h"
 
 
 NSString *const kLTCommentBody = @"body";
@@ -49,7 +49,7 @@ NSString *const kLTCommentCreatedAt = @"created_at";
         self.body = [self objectOrNilForKey:kLTCommentBody fromDictionary:dict];
         self.internalBaseClassIdentifier = [[self objectOrNilForKey:kLTCommentId fromDictionary:dict] doubleValue];
         self.likesCount = [[self objectOrNilForKey:kLTCommentLikesCount fromDictionary:dict] doubleValue];
-        self.player = [LTPlayer modelObjectWithDictionary:[dict objectForKey:kLTCommentPlayer]];
+        self.player = [LTDribbblePlayer modelObjectWithDictionary:[dict objectForKey:kLTCommentPlayer]];
         self.createdAt = [self objectOrNilForKey:kLTCommentCreatedAt fromDictionary:dict];
         
     }

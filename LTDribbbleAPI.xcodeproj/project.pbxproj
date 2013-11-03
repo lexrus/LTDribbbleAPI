@@ -15,8 +15,8 @@
 		D71E988B1822B9E8005D87C5 /* LTDribbbleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988A1822B9E8005D87C5 /* LTDribbbleAPI.m */; };
 		D71E988E1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988D1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m */; };
 		D759AAF91823F4B000EA4232 /* LTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTComment.m */; };
-		D759AAFA1823F4B000EA4232 /* LTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF61823F4B000EA4232 /* LTPlayer.m */; };
-		D759AAFB1823F4B000EA4232 /* LTShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF81823F4B000EA4232 /* LTShot.m */; };
+		D759AAFA1823F4B000EA4232 /* LTDribbblePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */; };
+		D759AAFB1823F4B000EA4232 /* LTDribbbleShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */; };
 		D759AAFE1823F58200EA4232 /* LTDribbblePagination.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */; };
 		D759AB001823FFD700EA4232 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98551822B71E005D87C5 /* AFHTTPRequestOperation.m */; };
 		D759AB021823FFD700EA4232 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98571822B71E005D87C5 /* AFHTTPRequestOperationManager.m */; };
@@ -70,10 +70,10 @@
 		D759AAF21823F4B000EA4232 /* LTDribbbleDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleDataModels.h; sourceTree = "<group>"; };
 		D759AAF31823F4B000EA4232 /* LTComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTComment.h; sourceTree = "<group>"; };
 		D759AAF41823F4B000EA4232 /* LTComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTComment.m; sourceTree = "<group>"; };
-		D759AAF51823F4B000EA4232 /* LTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPlayer.h; sourceTree = "<group>"; };
-		D759AAF61823F4B000EA4232 /* LTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPlayer.m; sourceTree = "<group>"; };
-		D759AAF71823F4B000EA4232 /* LTShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTShot.h; sourceTree = "<group>"; };
-		D759AAF81823F4B000EA4232 /* LTShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTShot.m; sourceTree = "<group>"; };
+		D759AAF51823F4B000EA4232 /* LTDribbblePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbblePlayer.h; sourceTree = "<group>"; };
+		D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbblePlayer.m; sourceTree = "<group>"; };
+		D759AAF71823F4B000EA4232 /* LTDribbbleShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleShot.h; sourceTree = "<group>"; };
+		D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbbleShot.m; sourceTree = "<group>"; };
 		D759AAFC1823F58200EA4232 /* LTDribbblePagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbblePagination.h; sourceTree = "<group>"; };
 		D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbblePagination.m; sourceTree = "<group>"; };
 		D759AB0E1824000B00EA4232 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -149,10 +149,10 @@
 				D717A28A18253E240046BF2C /* LTDribbbleResults.m */,
 				D759AAF31823F4B000EA4232 /* LTComment.h */,
 				D759AAF41823F4B000EA4232 /* LTComment.m */,
-				D759AAF51823F4B000EA4232 /* LTPlayer.h */,
-				D759AAF61823F4B000EA4232 /* LTPlayer.m */,
-				D759AAF71823F4B000EA4232 /* LTShot.h */,
-				D759AAF81823F4B000EA4232 /* LTShot.m */,
+				D759AAF51823F4B000EA4232 /* LTDribbblePlayer.h */,
+				D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */,
+				D759AAF71823F4B000EA4232 /* LTDribbbleShot.h */,
+				D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */,
 			);
 			path = LTDribbbleAPI;
 			sourceTree = "<group>";
@@ -312,11 +312,11 @@
 				D759AB091823FFD700EA4232 /* AFURLRequestSerialization.m in Sources */,
 				D717A28B18253E240046BF2C /* LTDribbbleResults.m in Sources */,
 				D759AB0B1823FFD700EA4232 /* AFURLResponseSerialization.m in Sources */,
-				D759AAFB1823F4B000EA4232 /* LTShot.m in Sources */,
+				D759AAFB1823F4B000EA4232 /* LTDribbbleShot.m in Sources */,
 				D759AAFE1823F58200EA4232 /* LTDribbblePagination.m in Sources */,
 				D71E988E1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m in Sources */,
 				D759AAF91823F4B000EA4232 /* LTComment.m in Sources */,
-				D759AAFA1823F4B000EA4232 /* LTPlayer.m in Sources */,
+				D759AAFA1823F4B000EA4232 /* LTDribbblePlayer.m in Sources */,
 				D71E98881822B986005D87C5 /* XCTestCase+AsynchronousTests.m in Sources */,
 				D71E987E1822B752005D87C5 /* LTDribbbleAPI_Tests.m in Sources */,
 				D71E988B1822B9E8005D87C5 /* LTDribbbleAPI.m in Sources */,

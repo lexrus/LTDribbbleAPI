@@ -1,5 +1,5 @@
 //
-//  LTShot.h
+//  LTDribbbleShot.h
 //
 //  Created by Lex  on 11/1/13
 //  Copyright (c) 2013 LexTang.com. All rights reserved.
@@ -7,9 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class LTPlayer;
+@class LTDribbblePlayer;
 
-@interface LTShot : NSObject <NSCoding>
+@interface LTDribbbleShot : NSObject <NSCoding>
 
 @property (nonatomic, assign) double internalBaseClassIdentifier;
 @property (nonatomic, strong) NSString *imageTeaserUrl;
@@ -22,12 +22,12 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) double reboundsCount;
 @property (nonatomic, assign) double height;
-@property (nonatomic, strong) LTPlayer *player;
+@property (nonatomic, strong) LTDribbblePlayer *player;
 @property (nonatomic, assign) double likesCount;
 @property (nonatomic, assign) double commentsCount;
 @property (nonatomic, strong) NSString *shortUrl;
 
-+ (LTShot *) modelObjectWithDictionary:(NSDictionary *)dict;
++ (LTDribbbleShot *) modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype) initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *) dictionaryRepresentation;
 

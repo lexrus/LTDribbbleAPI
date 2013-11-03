@@ -46,7 +46,7 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
 
 - (void) shot:(uint)aShotId :(LTResultBlock)resultBlock
 {
-    [self GET:f(rShotById, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTShot *shot) {
+    [self GET:f(rShotById, aShotId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbbleShot *shot) {
         if (resultBlock)
         {
             resultBlock(shot, nil);
@@ -166,7 +166,7 @@ NSString *const DRIBBBLE_API = @"http://api.dribbble.com/";
 
 - (void) player:(NSString *)aPlayerId :(LTResultBlock)resultBlock
 {
-    [self GET:f(rPlayerById, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTPlayer *player) {
+    [self GET:f(rPlayerById, aPlayerId) parameters:nil success: ^(AFHTTPRequestOperation *operation, LTDribbblePlayer *player) {
         if (resultBlock)
         {
             resultBlock(player, nil);

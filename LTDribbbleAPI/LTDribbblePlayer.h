@@ -1,5 +1,5 @@
 //
-//  LTPlayer.h
+//  LTDribbblePlayer.h
 //
 //  Created by Lex  on 11/1/13
 //  Copyright (c) 2013 LexTang.com. All rights reserved.
@@ -9,7 +9,7 @@
 
 
 
-@interface LTPlayer : NSObject <NSCoding>
+@interface LTDribbblePlayer : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *twitterScreenName;
 @property (nonatomic, strong) NSString *location;
@@ -32,7 +32,7 @@
 @property (nonatomic, assign) double commentsReceivedCount;
 @property (nonatomic, strong) NSString *username;
 
-+ (LTPlayer *) modelObjectWithDictionary:(NSDictionary *)dict;
++ (LTDribbblePlayer *) modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype) initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *) dictionaryRepresentation;
 

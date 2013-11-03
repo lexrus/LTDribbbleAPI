@@ -1,11 +1,11 @@
 //
-//  LTPlayer.m
+//  LTDribbblePlayer.m
 //
 //  Created by Lex  on 11/1/13
 //  Copyright (c) 2013 LexTang.com. All rights reserved.
 //
 
-#import "LTPlayer.h"
+#import "LTDribbblePlayer.h"
 
 
 NSString *const kLTPlayerTwitterScreenName = @"twitter_screen_name";
@@ -30,13 +30,13 @@ NSString *const kLTPlayerCommentsReceivedCount = @"comments_received_count";
 NSString *const kLTPlayerUsername = @"username";
 
 
-@interface LTPlayer ()
+@interface LTDribbblePlayer ()
 
 - (id) objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation LTPlayer
+@implementation LTDribbblePlayer
 
 @synthesize twitterScreenName = _twitterScreenName;
 @synthesize location = _location;
@@ -60,9 +60,9 @@ NSString *const kLTPlayerUsername = @"username";
 @synthesize username = _username;
 
 
-+ (LTPlayer *) modelObjectWithDictionary:(NSDictionary *)dict
++ (LTDribbblePlayer *) modelObjectWithDictionary:(NSDictionary *)dict
 {
-    LTPlayer *instance = [[LTPlayer alloc] initWithDictionary:dict];
+    LTDribbblePlayer *instance = [[LTDribbblePlayer alloc] initWithDictionary:dict];
     
     return instance;
 }

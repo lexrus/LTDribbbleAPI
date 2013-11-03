@@ -10,10 +10,10 @@
 #import "XCTestCase+AsynchronousTests.h"
 #import "LTDribbbleAPI.h"
 
-#define wait(...) try {}@finally{}[self startAsyncTest]; [self maximumDelayForAsyncTest:__VA_ARGS__];
-#define kill                     try {}@finally{}[self endAsyncTest];
+#define wait(...) try{}@finally{} [self startAsyncTest]; [self maximumDelayForAsyncTest:__VA_ARGS__];
+#define kill      try{}@finally{} [self endAsyncTest];
 
-#define MAX_DELAY_FOR_ASYNC_TEST 7
+#define TEST_TIMEOUT 7
 
 #define D [LTDribbbleAPI shared]
 
@@ -37,46 +37,46 @@
 
 - (void) testShotById
 {
-    [D shot:1283051 :^(LTShot *shot, NSError *error) {
+    [D shot:1283051 :^(LTDribbbleShot *shot, NSError *error) {
         XCTAssertNotNil(shot, @"Shot must not be nil!");
         XCTAssertTrue(shot.title && shot.title.length > 0, @"Shot must has a title!");
         XCTAssertNil(error, @"Failed to fetch shot!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testReboundsByShotId
 {
     [D rebounds:43424 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTShot*)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
+        XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testPopularShots
 {
     [D popularShots:^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTShot*)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
+        XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testShotsOfFollowing
 {
     [D shotsOfFollowing:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTShot*)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
+        XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testCommentsByShotId
@@ -87,51 +87,51 @@
         XCTAssertNil(error, @"Failed to fetch comments!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testShotsOfPlayer
 {
     [D shotsOfPlayer:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTShot*)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
+        XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testShotsPlayerLikes
 {
     [D shotsPlayerLikes:@"lexrus" :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTShot*)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
+        XCTAssertTrue([(LTDribbbleShot *)results.items.lastObject title].length > 0, @"The title of the last result must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testPlayerById
 {
-    [D player:@"simplebits" :^(LTPlayer *player, NSError *error) {
+    [D player:@"simplebits" :^(LTDribbblePlayer *player, NSError *error) {
         XCTAssertTrue(player.username.length > 0, @"Username must not be empty!");
         XCTAssertTrue(player.avatarUrl.length > 0, @"Player must has a avatar!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 - (void) testPlayerFollowers
 {
     [D playerFollowers:@"simplebits" :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTPlayer*)results.items.lastObject username].length > 0, @"The username of the last player must not be empty!");
+        XCTAssertTrue([(LTDribbblePlayer *)results.items.lastObject username].length > 0, @"The username of the last player must not be empty!");
         XCTAssertNil(error, @"Failed to fetch rebounds!");
         @kill
     }];
-    @wait(MAX_DELAY_FOR_ASYNC_TEST)
+    @wait(TEST_TIMEOUT)
 }
 
 @end

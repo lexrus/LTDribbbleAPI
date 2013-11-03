@@ -1,12 +1,12 @@
 //
-//  LTShot.m
+//  LTDribbbleShot.m
 //
 //  Created by Lex  on 11/1/13
 //  Copyright (c) 2013 LexTang.com. All rights reserved.
 //
 
-#import "LTShot.h"
-#import "LTPlayer.h"
+#import "LTDribbbleShot.h"
+#import "LTDribbblePlayer.h"
 
 
 NSString *const kLTShotId = @"id";
@@ -26,13 +26,13 @@ NSString *const kLTShotCommentsCount = @"comments_count";
 NSString *const kLTShotShortUrl = @"short_url";
 
 
-@interface LTShot ()
+@interface LTDribbbleShot ()
 
 - (id) objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation LTShot
+@implementation LTDribbbleShot
 
 @synthesize internalBaseClassIdentifier = _internalBaseClassIdentifier;
 @synthesize imageTeaserUrl = _imageTeaserUrl;
@@ -51,9 +51,9 @@ NSString *const kLTShotShortUrl = @"short_url";
 @synthesize shortUrl = _shortUrl;
 
 
-+ (LTShot *) modelObjectWithDictionary:(NSDictionary *)dict
++ (LTDribbbleShot *) modelObjectWithDictionary:(NSDictionary *)dict
 {
-    LTShot *instance = [[LTShot alloc] initWithDictionary:dict];
+    LTDribbbleShot *instance = [[LTDribbbleShot alloc] initWithDictionary:dict];
     
     return instance;
 }
@@ -77,7 +77,7 @@ NSString *const kLTShotShortUrl = @"short_url";
         self.title = [self objectOrNilForKey:kLTShotTitle fromDictionary:dict];
         self.reboundsCount = [[self objectOrNilForKey:kLTShotReboundsCount fromDictionary:dict] doubleValue];
         self.height = [[self objectOrNilForKey:kLTShotHeight fromDictionary:dict] doubleValue];
-        self.player = [LTPlayer modelObjectWithDictionary:[dict objectForKey:kLTShotPlayer]];
+        self.player = [LTDribbblePlayer modelObjectWithDictionary:[dict objectForKey:kLTShotPlayer]];
         self.likesCount = [[self objectOrNilForKey:kLTShotLikesCount fromDictionary:dict] doubleValue];
         self.commentsCount = [[self objectOrNilForKey:kLTShotCommentsCount fromDictionary:dict] doubleValue];
         self.shortUrl = [self objectOrNilForKey:kLTShotShortUrl fromDictionary:dict];
