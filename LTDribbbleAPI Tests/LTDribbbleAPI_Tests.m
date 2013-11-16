@@ -13,7 +13,7 @@
 #define wait(...) try{}@finally{} [self startAsyncTest]; [self maximumDelayForAsyncTest:__VA_ARGS__];
 #define kill      try{}@finally{} [self endAsyncTest];
 
-#define TEST_TIMEOUT 7
+#define TEST_TIMEOUT 15
 
 #define D [LTDribbbleAPI shared]
 
@@ -84,7 +84,7 @@
 {
     [D comments:1283051 page:1 :^(LTDribbbleResults *results, NSError *error) {
         XCTAssertTrue(results.pagination.pages > 0, @"Results must be at least one page.");
-        XCTAssertTrue([(LTComment*)results.items.lastObject player].name.length > 0, @"The player of the last comment must has a name!");
+        XCTAssertTrue([(LTDribbbleComment*)results.items.lastObject player].name.length > 0, @"The player of the last comment must has a name!");
         XCTAssertNil(error, @"Failed to fetch comments!");
         @kill
     }];

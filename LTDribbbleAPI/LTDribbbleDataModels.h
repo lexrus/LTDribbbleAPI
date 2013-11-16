@@ -6,6 +6,6 @@
 //
 
 #import "LTDribbblePlayer.h"
-#import "LTComment.h"
+#import "LTDribbbleComment.h"
 #import "LTDribbbleShot.h"
 #import "LTDribbbleResults.h"

@@ -13,7 +13,7 @@
 		D71E98881822B986005D87C5 /* XCTestCase+AsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98871822B986005D87C5 /* XCTestCase+AsynchronousTests.m */; };
 		D71E988B1822B9E8005D87C5 /* LTDribbbleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988A1822B9E8005D87C5 /* LTDribbbleAPI.m */; };
 		D71E988E1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988D1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m */; };
-		D759AAF91823F4B000EA4232 /* LTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTComment.m */; };
+		D759AAF91823F4B000EA4232 /* LTDribbbleComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTDribbbleComment.m */; };
 		D759AAFA1823F4B000EA4232 /* LTDribbblePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */; };
 		D759AAFB1823F4B000EA4232 /* LTDribbbleShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */; };
 		D759AAFE1823F58200EA4232 /* LTDribbblePagination.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */; };
@@ -35,7 +35,7 @@
 		D7C3006A18261686005FA599 /* LTDribbbleShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF81823F4B000EA4232 /* LTDribbbleShot.m */; };
 		D7C3006B18261686005FA599 /* LTDribbblePagination.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */; };
 		D7C3006C18261686005FA599 /* LTDribbbleResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E988D1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m */; };
-		D7C3006D18261686005FA599 /* LTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTComment.m */; };
+		D7C3006D18261686005FA599 /* LTDribbbleComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF41823F4B000EA4232 /* LTDribbbleComment.m */; };
 		D7C3006E18261686005FA599 /* LTDribbblePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */; };
 		D7C3006F18261686005FA599 /* XCTestCase+AsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E98871822B986005D87C5 /* XCTestCase+AsynchronousTests.m */; };
 		D7C3007018261686005FA599 /* LTDribbbleAPI_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E987D1822B752005D87C5 /* LTDribbbleAPI_Tests.m */; };
@@ -91,8 +91,8 @@
 		D71E988C1822BBB9005D87C5 /* LTDribbbleResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleResponseSerializer.h; sourceTree = "<group>"; };
 		D71E988D1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbbleResponseSerializer.m; sourceTree = "<group>"; };
 		D759AAF21823F4B000EA4232 /* LTDribbbleDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleDataModels.h; sourceTree = "<group>"; };
-		D759AAF31823F4B000EA4232 /* LTComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTComment.h; sourceTree = "<group>"; };
-		D759AAF41823F4B000EA4232 /* LTComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTComment.m; sourceTree = "<group>"; };
+		D759AAF31823F4B000EA4232 /* LTDribbbleComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleComment.h; sourceTree = "<group>"; };
+		D759AAF41823F4B000EA4232 /* LTDribbbleComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbbleComment.m; sourceTree = "<group>"; };
 		D759AAF51823F4B000EA4232 /* LTDribbblePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbblePlayer.h; sourceTree = "<group>"; };
 		D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDribbblePlayer.m; sourceTree = "<group>"; };
 		D759AAF71823F4B000EA4232 /* LTDribbbleShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDribbbleShot.h; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 				D759AAFD1823F58200EA4232 /* LTDribbblePagination.m */,
 				D717A28918253E240046BF2C /* LTDribbbleResults.h */,
 				D717A28A18253E240046BF2C /* LTDribbbleResults.m */,
-				D759AAF31823F4B000EA4232 /* LTComment.h */,
-				D759AAF41823F4B000EA4232 /* LTComment.m */,
+				D759AAF31823F4B000EA4232 /* LTDribbbleComment.h */,
+				D759AAF41823F4B000EA4232 /* LTDribbbleComment.m */,
 				D759AAF51823F4B000EA4232 /* LTDribbblePlayer.h */,
 				D759AAF61823F4B000EA4232 /* LTDribbblePlayer.m */,
 				D759AAF71823F4B000EA4232 /* LTDribbbleShot.h */,
@@ -409,7 +409,7 @@
 				D759AAFB1823F4B000EA4232 /* LTDribbbleShot.m in Sources */,
 				D759AAFE1823F58200EA4232 /* LTDribbblePagination.m in Sources */,
 				D71E988E1822BBB9005D87C5 /* LTDribbbleResponseSerializer.m in Sources */,
-				D759AAF91823F4B000EA4232 /* LTComment.m in Sources */,
+				D759AAF91823F4B000EA4232 /* LTDribbbleComment.m in Sources */,
 				D759AAFA1823F4B000EA4232 /* LTDribbblePlayer.m in Sources */,
 				D71E98881822B986005D87C5 /* XCTestCase+AsynchronousTests.m in Sources */,
 				D71E987E1822B752005D87C5 /* LTDribbbleAPI_Tests.m in Sources */,
@@ -432,7 +432,7 @@
 				D7C3006A18261686005FA599 /* LTDribbbleShot.m in Sources */,
 				D7C3006B18261686005FA599 /* LTDribbblePagination.m in Sources */,
 				D7C3006C18261686005FA599 /* LTDribbbleResponseSerializer.m in Sources */,
-				D7C3006D18261686005FA599 /* LTComment.m in Sources */,
+				D7C3006D18261686005FA599 /* LTDribbbleComment.m in Sources */,
 				D7C3006E18261686005FA599 /* LTDribbblePlayer.m in Sources */,
 				D7C3006F18261686005FA599 /* XCTestCase+AsynchronousTests.m in Sources */,
 				D7C3007018261686005FA599 /* LTDribbbleAPI_Tests.m in Sources */,

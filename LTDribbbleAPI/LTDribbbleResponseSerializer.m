@@ -13,25 +13,6 @@
 
 @implementation LTDribbbleResponseSerializer
 
-- (instancetype) init
-{
-    self = [super init];
-    if (self)
-    {
-        
-    }
-    return self;
-}
-
-- (BOOL) validateResponse:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error
-{
-    if ([response.MIMEType rangeOfString:@"json" options:NSCaseInsensitiveSearch].location != NSNotFound)
-    {
-        
-    }
-    return YES;
-}
-
 - (id) responseObjectForResponse:(NSURLResponse *)response
                             data:(NSData *)data
                            error:(NSError *__autoreleasing *)error
@@ -71,7 +52,7 @@
             NSMutableArray *comments = [NSMutableArray array];
             for (NSDictionary *comment in object[@"comments"])
             {
-                [comments addObject:[LTComment modelObjectWithDictionary:comment]];
+                [comments addObject:[LTDribbbleComment modelObjectWithDictionary:comment]];
             }
             LTDribbblePagination *pagination = [LTDribbblePagination paginationWithDictionary:object];
             return [LTDribbbleResults resultsWithItems:comments pagination:pagination];
