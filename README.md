@@ -3,6 +3,9 @@
 Yet another [Dribbble API](http://dribbble.com/api) client for iOS 6.0+ and Mac OS X 10.8+ based on [AFNetworking 2.0](https://github.com/AFNetworking/AFNetworking).
 
 
+[![Build Status](https://travis-ci.org/lexrus/LTDribbbleAPI.png)](https://travis-ci.org/lexrus/LTDribbbleAPI)
+
+
 ## Installation with CocoaPods
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
